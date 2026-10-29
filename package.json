@@ -1,0 +1,20 @@
+{
+  "name": "bolsa-trabajo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo de la plataforma Bolsa de Trabajo",
+  "packageManager": "pnpm@10.34.7",
+  "scripts": {
+    "dev:api": "pnpm --filter @bolsa/shared build && pnpm --filter api start:dev",
+    "dev:web": "pnpm --filter web dev",
+    "build": "pnpm -r run build",
+    "lint": "pnpm -r run lint",
+    "test": "pnpm -r run test",
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "db:logs": "docker compose logs -f"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
